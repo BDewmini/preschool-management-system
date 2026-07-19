@@ -1,0 +1,101 @@
+/* ============================================
+   SIDEBAR STYLES
+   Paste this inside the <style> block of EVERY
+   page's <head> (or better: save as sidebar.css
+   and link it with <link rel="stylesheet" href="/preschool/sidebar.css">
+   in every page's <head>, replacing any old
+   .sidebar / .nav / .sidebar-footer rules there)
+   ============================================ */
+
+.sidebar {
+      width: var(--sidebar-w);
+      background: linear-gradient(160deg, #1a2a4a 0%, #243756 100%);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 100;
+      overflow-y: auto;
+    }
+    .sidebar-brand { flex-shrink: 0; }
+    .sidebar-footer { flex-shrink: 0; }
+    .sidebar-brand {
+      padding: 28px 24px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .brand-icon {
+      width: 42px; height: 42px;
+      background: var(--sun);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .brand-name {
+      font-family: 'Fredoka One', cursive;
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.1;
+    }
+    .brand-sub { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: .5px; }
+
+    .nav { padding: 20px 12px; flex: 1; }
+    .nav-label {
+      font-size: 10px; font-weight: 800; letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.3); text-transform: uppercase;
+      padding: 0 12px; margin: 16px 0 6px;
+    }
+    .nav a {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 14px; font-weight: 600;
+      transition: all .18s;
+      margin-bottom: 2px;
+    }
+    .nav a:hover, .nav a.active {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    .nav a.active { background: rgba(79,195,247,0.2); color: var(--sky); }
+    .nav a span.icon { font-size: 18px; width: 22px; text-align: center; }
+
+    .nav a.logout-link {
+      color: rgba(240,98,146,0.85);
+    }
+    .nav a.logout-link:hover {
+      background: rgba(240,98,146,0.15);
+      color: #fff;
+    }
+
+    .sidebar-footer {
+      padding: 16px 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .user-info { display: flex; align-items: center; gap: 10px; }
+    .avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--rose);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: #fff; font-size: 15px;
+    }
+    .user-name { font-size: 13px; font-weight: 700; color: #fff; }
+    .user-role { font-size: 11px; color: rgba(255,255,255,0.4); }
+    .logout-btn {
+      margin-left: auto;
+      background: rgba(240,98,146,0.2);
+      border: none; border-radius: 8px;
+      padding: 6px 10px; cursor: pointer;
+      color: var(--rose); font-size: 18px;
+      transition: background .18s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logout-btn:hover { background: rgba(240,98,146,0.4); }

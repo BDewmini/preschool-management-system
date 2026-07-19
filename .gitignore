@@ -1,0 +1,39 @@
+# ===================================
+# Sensitive config files - NEVER commit these
+# ===================================
+# Database & core credentials
+db.php
+
+# Email (Gmail App Password)
+email_config.php
+
+# Firebase / Google Cloud service account (REAL PRIVATE KEY - never share)
+service-account.json
+
+# PayHere payment gateway (real merchant secret)
+payhere_config.php
+pay.php
+
+# SMS gateway (Notify.lk API key)
+sms_helper.php
+*.env
+.env
+
+# ===================================
+# Dependencies
+# ===================================
+/vendor/
+node_modules/
+
+# ===================================
+# OS / Editor files
+# ===================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===================================
+# Logs
+# ===================================
+*.log
